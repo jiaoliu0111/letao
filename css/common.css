@@ -1,3 +1,18 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.red {
+  color: #A94442;
+}
+
 .bd_bg {
   background: #222D32;
 }
@@ -12,3 +27,145 @@
 .mt_150 {
   margin-top: 150px;
 }
+
+/* 左边侧边栏布局 */
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #222D32;
+  z-index: 999;
+  transition: all 1s;
+}
+.lt_aside.hidemenu {
+  left: -180px;
+}
+
+.lt_aside .brand {
+  width: 180px;
+  height: 50px;
+  background-color: #367FA9;
+  
+}
+.lt_aside .brand  a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+
+}
+.lt_aside .user {
+  text-align: center;
+  padding-top: 30px;
+  height: 180px;
+}
+.lt_aside .user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.lt_aside .user p {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.lt_aside .nav li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  /* text-align: center; */
+  padding-left: 40px;
+  color: #fff;
+  border-left: 3px solid transparent;
+}
+.lt_aside .nav li a.active {
+  background-color: #1D1F21;
+  border-left: 3px solid #069;
+}
+.lt_aside .nav li a i {
+  margin-right: 5px;
+}
+
+.lt_aside .nav .child  {
+  display: none;
+}
+.lt_aside .nav .child.active {
+  display: block;
+}
+.lt_aside .nav .child a {
+  padding-left: 60px;
+}
+
+/* 右侧部分 */
+.lt_main {
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 1s;
+}
+.lt_main.hidemenu {
+  padding-left: 0;
+}
+
+.lt_main .lt_topbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  padding-left: 180px;
+  background-color: #367FA9;
+  transition: all 1s;
+  /* z-index: 666; */
+}
+.lt_main .lt_topbar.hidemenu {
+  padding-left: 0;
+}
+.lt_main .lt_topbar a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.lt_main .lt_topbar a i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.lt_main .lt_content {
+  height: 1000px;
+  padding: 15px;
+}
+
+.lt_main .lt_content .echarts_left,
+.lt_main .lt_content .echarts_right {
+  width: 48%;
+  height: 400px;
+  background-color: skyblue;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
