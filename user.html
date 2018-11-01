@@ -67,6 +67,13 @@
 
           </tbody>
         </table>
+
+        <div class="text-right">
+          <!-- 为分页准备一个容器 -->
+          <ul id="paginator">
+
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -95,7 +102,7 @@
   <script type='text/html' id='tmp'>
     {{ each rows v i }}
       <tr>
-        <td> {{i+1}} </td>
+        <td> {{ (i+1) + (page-1)*size }} </td>
         <td> {{v.username}} </td>
         <td>{{ v.mobile }}</td>
         <td>{{ v.isDelete ===1 ? '正常': '已禁用' }}</td>
@@ -114,8 +121,10 @@
   <script src="./lib/bootstrap/js/bootstrap.js"></script>
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
-  <script src="./js/checkLogin.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+  <!-- 判断用户登录状态 -->
+  <script src="./js/checkLogin.js"></script>
   <script src="./js/comment.js"></script>
   <script src="./js/user.js"></script>
 
